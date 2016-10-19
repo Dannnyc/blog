@@ -5,6 +5,7 @@ function Article(options){
 }
 
 Article.prototype.update = function(){
-    // do an AJAX req to https://test-danciocoiu.c9users.io/curs22/articles/update7
+    //only available in feature_1
+    // do an AJAX req to https://test-danciocoiu.c9users.io/curs22/articles/update
     //new l
 }
