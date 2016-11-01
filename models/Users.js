@@ -1,11 +1,9 @@
-$(window).ready(function(){
-    var user = new User();
-    var userDef = User.login();
-    userDef.done(redirect);
+function Users(){
     
-    function login(){
-        var email = $("[name='email-value']").val();
-        var password = $("[name='password']").val();
+
+}
+Users.prototype.login = function(email, password) {
+       
         
         var ajaxOptions = {
             url:"https://test-danciocoiu.c9users.io/curs22/login",
@@ -16,7 +14,7 @@ $(window).ready(function(){
                 password:password
             },
             success:function(resp){
-                console.log(resp);
+                window.currentUser = resp;
             },
             error:function(xhr,status,errorMessage){
                 console.log("Error status:"+status);
@@ -25,6 +23,5 @@ $(window).ready(function(){
                 console.log("AJAX Req has completed");
             }
         };
-        $.ajax(ajaxOptions);
+        return $.ajax(ajaxOptions);
     }
-})

@@ -4,24 +4,19 @@
         <script   src="//code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
         <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/css" />
-        <script type="text/javascript" src="../models/User.js"></script>
-        <script type="text/javascript" src="../views/login.js"></script>
+        <script type="text/javascript" src="../models/Users.js"></script>
+        <script type="text/javascript" src="../views/loginUser.js"></script>
         <script>
-         $(window).ready(function(){
-            $(".login-btn").on("click",function(ev){
-                ev.preventDefault();
-                
-            });
-            
-         });
+        
         </script>
     </head>
     <body>
         <section>
-            <input type="email" name="email-value"/>
-            <input type="password" name="password"/>
+            <input type="email" name="email-value" required/>
+            <input type="password" name="password" required/>
             <button type="submit" class="js-login-btn">Login</button>
         </section>
+        
     </body>
 </html>
 

@@ -6,21 +6,13 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/css" />
         <script type="text/javascript" src="../models/Article.js"></script>
         <script type="text/javascript" src="../models/Articles.js"></script>
-        <script type="text/javascript" src="../views/articlesAdmin.js"></script>
-        <script>
-         $(window).ready(function(){
-            $(".js-add-article").on("click",function(ev){
-                    ev.preventDefault();
-                    window.location.href = "https://test-danciocoiu.c9users.io/curs27blog/pages/createarticle.html";
-                });
-         });
-        </script>
+        <script type="text/javascript" src="../views/editarticle.js"></script>
     </head>
-    <body>
-        <button class="js-add-article"> Add article</button>
-        <button id='logout'> Log out </button>
-         <ul class="js-articles">
-             
-         </ul>
+    <body><form id="article-form">
+            <input type="text" name="title"/>
+            <input type="text" name="content"/>
+            <button type="submit">Update</button>
+        </form>
+        
     </body>
 </html>
