@@ -90,22 +90,3 @@ Articles.prototype.updateArticle = function(formData){
         });
 };
 
-Articles.prototype.search = function(text){
-    var that= this;
-    that.models= [];
-    return $.ajax({
-            url:"https://test-danciocoiu.c9users.io/curs22/articles/search?value="+text,
-            type:"GET",
-            dataType:"json",
-            success:function(resp){
-                for(var i = 0; i<resp.length; i++){
-                    var article = new Article(resp[i]);
-                    that.models.push(article);
-                }
-            },
-            error:function(xhr,status,errorMessage){
-                console.log("Error status:"+status);
-            }
-        });
-    
-}

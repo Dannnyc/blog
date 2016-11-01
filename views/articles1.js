@@ -21,9 +21,6 @@ $(window).ready(function(){
     
     
    
-    $( ".search-article" ).click( function() {
-            var articlesDef = articles.search($('#search').val());
-            articlesDef.done(listArticles);
-    });
+ 
     
 });    
